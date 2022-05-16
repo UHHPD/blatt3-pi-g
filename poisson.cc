@@ -16,6 +16,7 @@ int main() {
 
     ifstream fin("datensumme.txt");
     ofstream fout("hist.txt");
+    ofstream fout2("histpoi.txt");
     int n_i;
     vector <int> zaehler(11);
     for(int i = 0 ; i < 234 ; ++i) {
@@ -26,6 +27,7 @@ int main() {
     fin.close();
   for ( unsigned int k = 0 ; k < zaehler . size () ; ++ k ) {
   std :: cout << k << " : " << zaehler [ k ] << std :: endl ;
-  fout << k << " " << zaehler [ k ] << " " << 234*(poisson(3.11538, k)) << std :: endl;
+  fout << k << " " << zaehler [ k ] << std :: endl;
+  fout2 << k << " " << zaehler [ k ] << " " << 234*(poisson(3.11538, k)) << std :: endl;
 }
 }
